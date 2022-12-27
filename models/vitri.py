@@ -152,7 +152,7 @@ class Encoder(nn.Module):
         resi = h0
         for idx, layer_block in enumerate(self.layer):
             fraction = (idx + 1) % 8
-            hidden_states, attn = layer_block(hidden_states, resi, idx + 1)
+            hidden_states, attn = layer_block(hidden_states, resi, fraction + 1)
             if fraction == 0: resi = hidden_states
             attn_list.append(attn)
             fe_list.append(hidden_states)
