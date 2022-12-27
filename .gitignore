@@ -132,8 +132,4 @@ dmypy.json
 # *.ipynb
 dataset/
 .vscode
-*.pth
-not_commit
 *.sh
-output
-*.ipynb
